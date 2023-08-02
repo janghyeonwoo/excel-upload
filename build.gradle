@@ -8,7 +8,7 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '17'
+	sourceCompatibility = '11'
 }
 
 configurations {
@@ -25,6 +25,13 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//EXCEL
+	implementation group: 'org.apache.poi', name: 'poi', version: '4.1.2'
+	//FILE_UTIL
+	implementation 'commons-io:commons-io:2.6'
+	//VALID_CHECK
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
