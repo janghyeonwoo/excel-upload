@@ -47,7 +47,7 @@ public class ExcelUtil {
             case STRING:
                 return cell.getStringCellValue();
             case NUMERIC:
-                return String.valueOf(cell.getNumericCellValue());
+                return String.valueOf(cell.getNumericCellValue()).replaceAll(".0", "");
             case FORMULA:
                 return String.valueOf(cell.getCellFormula());
             case BOOLEAN:
